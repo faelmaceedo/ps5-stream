@@ -2,6 +2,8 @@
 
 Central de filmes e séries para o **PS5 desbloqueado**, em tela cheia e controlada pelo DualSense. Usa os mesmos addons do ecossistema Stremio (catálogos e fontes) e reproduz vídeos por **link direto ou torrent, tudo no próprio console**. Não precisa de PC nem de servidor na rede.
 
+**[⬇ Baixar ps-stream.elf (v0.3.7)](https://github.com/faelmaceedo/ps5-stream/releases/download/v0.3.7/ps-stream.elf)**
+
 ![Tela inicial](screens/home.png)
 
 ## O que faz
@@ -38,7 +40,7 @@ Central de filmes e séries para o **PS5 desbloqueado**, em tela cheia e control
 
 ## Instalação
 
-1. Baixe o `ps-stream.elf` na página de [Releases](../../releases).
+1. Baixe o **[ps-stream.elf (v0.3.7)](https://github.com/faelmaceedo/ps5-stream/releases/download/v0.3.7/ps-stream.elf)**.
 2. Envie o ELF para o PS5 pelo seu carregador de payloads. Por exemplo, a partir do PC:
    ```sh
    nc -q0 <ip-do-ps5> 9021 < ps-stream.elf
