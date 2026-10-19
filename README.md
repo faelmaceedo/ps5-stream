@@ -1,83 +1,87 @@
 # PS-Stream
 
-Central de filmes e séries para o **PS5 desbloqueado**, em tela cheia e controlada pelo DualSense. Usa os mesmos addons do ecossistema Stremio (catálogos e fontes) e reproduz vídeos por **link direto ou torrent, tudo no próprio console**. Não precisa de PC nem de servidor na rede.
+**English** · [Português](README.pt-BR.md)
 
-![Tela inicial](screens/home.png)
+A movie and TV show hub for **jailbroken PS5**, full screen and controlled with the DualSense. It uses the same addons as the Stremio ecosystem (catalogs and sources) and plays videos from **direct links or torrents, entirely on the console**. No PC or server on your network is needed.
 
-## O que faz
+![Home screen](screens/home.png)
 
-- **Catálogos** de filmes e séries vindos dos addons instalados (Cinemeta, FenixFlix…), com pôsteres e informações de cada título.
-- **Busca** com teclado na tela, navegável pelo controle.
-- **Séries por temporada**, com a lista de episódios e o progresso de cada um.
-- **Fontes de vídeo** com qualidade (4K, 1080p…), tamanho, origem e **quantidade de seeds**, para escolher a melhor. Dá para ordenar por seeds.
-- **Torrents no console**: o vídeo começa a tocar enquanto baixa, sem esperar o download terminar.
-- **Player** com avanço e retrocesso, barra de progresso, lista de **faixas de áudio** e **legendas**.
-- **Continuar assistindo**: o vídeo volta de onde você parou. A home e o perfil mostram uma entrada por obra, no último episódio visto.
-- **Perfil** com os títulos assistidos recentemente e o tempo assistido.
-- **Ícone na tela inicial** do PS5. O cache de vídeo é apagado quando o app fecha.
-- **Addons padrão** já instalados: Cinemeta, FenixFlix e Torrentio. Dá para adicionar outros pelo app ou pelo celular, na página de configuração em `http://<ip-do-ps5>:8090`.
+> The app interface is currently in Portuguese (Brazil).
 
-## Capturas
+## Features
 
-| Detalhes da série | Fontes com seeds |
+- **Catalogs** of movies and shows from the installed addons (Cinemeta, FenixFlix…), with posters and details for each title.
+- **Search** with an on-screen keyboard you can use with the controller.
+- **Shows by season**, with the episode list and your progress on each episode.
+- **Video sources** showing quality (4K, 1080p…), size, origin and **seed count**, so you can pick the best one. You can sort by seeds.
+- **Torrents on the console**: the video starts playing while it downloads, without waiting for the download to finish.
+- **Player** with seeking, a progress bar, and lists of **audio tracks** and **subtitles**.
+- **Continue watching**: videos resume where you left off. The home screen and profile show one entry per title, at the last episode watched.
+- **Profile** with recently watched titles and total watch time.
+- **Home screen icon** on the PS5. The video cache is deleted when the app closes.
+- **Default addons** preinstalled: Cinemeta, FenixFlix and Torrentio. You can add others in the app or from your phone, on the settings page at `http://<ps5-ip>:8090`.
+
+## Screenshots
+
+| Show details | Sources with seeds |
 |---|---|
-| ![Detalhes](screens/detalhes.png) | ![Fontes](screens/fontes.png) |
+| ![Details](screens/detalhes.png) | ![Sources](screens/fontes.png) |
 
-| Busca | Perfil |
+| Search | Profile |
 |---|---|
-| ![Busca](screens/busca.png) | ![Perfil](screens/perfil.png) |
+| ![Search](screens/busca.png) | ![Profile](screens/perfil.png) |
 
-| Player | Lista de áudio e legendas |
+| Player | Audio and subtitle list |
 |---|---|
-| ![Player](screens/player.png) | ![Áudio](screens/player-audio.png) |
+| ![Player](screens/player.png) | ![Audio](screens/player-audio.png) |
 
-## Requisitos
+## Requirements
 
-- PS5 desbloqueado, com um carregador de payloads ELF (elfldr na porta 9021, como o do etaHEN ou do ps5-payload-dev). Testado no firmware 13.60.
-- Internet no console.
+- A jailbroken PS5 with an ELF payload loader (elfldr on port 9021, such as the one from etaHEN or ps5-payload-dev). Tested on firmware 13.60.
+- Internet on the console.
 
-## Instalação
+## Installation
 
-1. Baixe o **[ps-stream.elf (v0.3.7)](https://github.com/faelmaceedo/ps5-stream/releases/download/v0.3.7/ps-stream.elf)**.
-2. Envie o ELF para o PS5 pelo seu carregador de payloads. Por exemplo, a partir do PC:
+1. Download **[ps-stream.elf (v0.3.7)](https://github.com/faelmaceedo/ps5-stream/releases/download/v0.3.7/ps-stream.elf)**.
+2. Send the ELF to the PS5 with your payload loader. For example, from a PC:
    ```sh
-   nc -q0 <ip-do-ps5> 9021 < ps-stream.elf
+   nc -q0 <ps5-ip> 9021 < ps-stream.elf
    ```
-3. Aparece a notificação **"PS-Stream pronto"**, e o ícone do PS-Stream fica na tela inicial.
-4. Abra pelo ícone.
+3. The **"PS-Stream pronto"** notification appears, and the PS-Stream icon is added to the home screen.
+4. Open it from the icon.
 
-O payload precisa ser carregado de novo a cada vez que o console for ligado, como qualquer payload. O ícone continua na tela inicial.
+Like any payload, it has to be loaded again every time the console is turned on. The icon stays on the home screen.
 
-## Controles
+## Controls
 
-| Botão | Navegação | Player |
+| Button | Browsing | Player |
 |---|---|---|
-| ✕ | Abrir / escolher | Pausar / continuar |
-| ◯ | Voltar | Sair do vídeo |
-| △ | Buscar (na busca: espaço) | Lista de áudios |
-| □ | Ordenar fontes por seeds (na busca: apagar) | Lista de legendas |
-| ← → | Navegar | 10 s para trás / para frente |
-| ↑ ↓ | Navegar | 1 min para frente / para trás |
-| L1 / R1 | Páginas (na busca: R1 busca na hora) | L1 volta ao início |
-| Options | Perfil | |
+| ✕ | Open / select | Pause / resume |
+| ◯ | Back | Exit the video |
+| △ | Search (in search: space) | Audio track list |
+| □ | Sort sources by seeds (in search: delete) | Subtitle list |
+| ← → | Navigate | Back / forward 10 s |
+| ↑ ↓ | Navigate | Forward / back 1 min |
+| L1 / R1 | Pages (in search: R1 searches right away) | L1 restarts from the beginning |
+| Options | Profile | |
 
-## Ao abrir pelo ícone
+## Opening from the icon
 
-O PS5 mostra por um instante a tela **"Abrindo PS-Stream…"** e logo troca para o app. Se essa tela ficar parada, o app já está aberto por trás: aperte **◯** para voltar para ele.
+The PS5 briefly shows an **"Abrindo PS-Stream…"** (opening) screen and then switches to the app. If that screen stays up, the app is already open behind it: press **◯** to go back to it.
 
-## Problemas
+## Troubleshooting
 
-Os registros ficam em `/data/ps-stream/launcher.log` no console (acessível por FTP). Ao abrir uma issue, anexe esse arquivo.
+Logs are saved to `/data/ps-stream/launcher.log` on the console (reachable over FTP). Attach this file when you open an issue.
 
-## Aviso
+## Disclaimer
 
-O PS-Stream não hospeda, indexa nem distribui conteúdo. Ele só exibe o que os addons configurados pelo usuário fornecem. Você é responsável pelo que acessa e por respeitar as leis do seu país.
+PS-Stream does not host, index or distribute any content. It only displays what the addons configured by the user provide. You are responsible for what you access and for following the laws of your country.
 
-O PS-Stream não tem ligação com a Sony, a Stremio ou os autores dos addons.
+PS-Stream is not affiliated with Sony, Stremio or the addon authors.
 
-## Créditos
+## Credits
 
-- [ps5-payload-dev](https://github.com/ps5-payload-dev): SDK, SDL2 para PS5 e o carregador de homebrew do websrv (GPLv3).
+- [ps5-payload-dev](https://github.com/ps5-payload-dev): SDK, SDL2 for PS5 and the websrv homebrew loader (GPLv3).
 - [libtransmission](https://transmissionbt.com/): torrents.
-- [FFmpeg](https://ffmpeg.org/) e [SDL_kitchensink](https://github.com/katajakasa/SDL_kitchensink): reprodução de vídeo.
-- [Jansson](https://github.com/akheron/jansson) e [libcurl](https://curl.se/).
+- [FFmpeg](https://ffmpeg.org/) and [SDL_kitchensink](https://github.com/katajakasa/SDL_kitchensink): video playback.
+- [Jansson](https://github.com/akheron/jansson) and [libcurl](https://curl.se/).
